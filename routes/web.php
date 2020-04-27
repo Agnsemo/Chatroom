@@ -24,3 +24,5 @@ Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
 Route::post('/conversation/send', 'ContactsController@send');
 
 Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
+
+
