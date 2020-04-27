@@ -17,11 +17,14 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <img class="image" src="../images/user.png" alt="Your Profile Image" 
-                        style="width:200px;height:200px;padding:10px;">
+                        style="width:250px;height:250px;padding:10px;margin:20px;">
+                        <!--button uplaod picture-->
+                        <button type = "submit"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
+                            <a style="color:blue" href="">Upload picture</a></button>
                     </div>
                     <div class="col-sm-9">
                         {{-- Username--}}
-                        </br>
+                        </br></br>
                         <h2>
                             <b>Hello, <i>{{ Auth::user()-> name}}</i></b>
                         </h2>
@@ -29,14 +32,24 @@
                         <hr>
                         <h6>Profile functions</h6>
                         </br>
-                        <form>
-                            <button type="submit" class="btn btn-info">Edit Profile</a></button>
-                            <button type = "submit" class = "btn btn-info">Change Password</button>
+                            <!-- Edit-->
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:white" href="{{ route('user.edit') }}">Edit profile</a></button>
+
+                            <!--change password-->
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:white" href="">Change Password</a></button>
+                            
+                            <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
-                            <button type = "submit" class = "btn btn-info">Remove account</button>
-                            <button href="{{ route('home') }}" type = "submit" class = "btn btn-info">Back to chat</button>
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:white" href="">Remove Account</a></button>
+
+                             <!--to chat-->
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:white" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
-                        </form>
+                        
                         
                     </div>
                 </div>

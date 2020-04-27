@@ -28,10 +28,13 @@ class UserProfileController extends Controller
         return view('user.profile');
     }
 
-    public function edit($id)
+    //public function edit($id)
+    public function edit()
     {
         //
-        if (Auth::user())
+        return view('user.edit');
+        
+        /**if (Auth::user())
         {
             $user = User::find(Auth::user()->id);
             if ($user){
@@ -41,7 +44,7 @@ class UserProfileController extends Controller
             }
         }else{
             return redirect()->back();
-        }
+        }**/
         
     }
 
