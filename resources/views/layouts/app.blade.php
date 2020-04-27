@@ -52,7 +52,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                                     {{-- UserProfile --}}
-                                    <a class="dropdown-item" href=""> 
+                                    <a class="dropdown-item" href="{{ route('user.profile') }}"> 
                                     <i class="fas fa-user"></i> Profile
                                     </a>
 
