@@ -26,5 +26,7 @@ Route::post('/conversation/send', 'ContactsController@send');
 Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
 
 Route::get('user/edit', 'UserProfileController@edit')->name('user.edit');
+Route::post('user/edit', 'UserProfileController@update')->name('user.update');
+
 
 

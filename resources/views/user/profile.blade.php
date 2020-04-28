@@ -35,6 +35,7 @@
                             <!-- Edit-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
                             <a style="color:white" href="{{ route('user.edit') }}">Edit profile</a></button>
+                            
 
                             <!--change password-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
