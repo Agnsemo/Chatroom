@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/contacts', 'ContactsController@get');
 Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
 Route::post('/conversation/send', 'ContactsController@send');
@@ -32,5 +33,6 @@ Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('pas
 
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
 
+Route::get('/search', 'SearchController@search');
 
 
