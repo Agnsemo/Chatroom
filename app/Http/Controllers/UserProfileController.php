@@ -42,8 +42,8 @@ class UserProfileController extends Controller
             if(Auth::user()->email === $request['email'])
             {
                 $validate = $request->validate([
-                    'name' => 'required|min:2',
-                    'email' => 'required|email'
+                    'name' => 'required|min:2|max:20',
+                    'email' => 'required|email|max:50'
                 ]);
             }
             else{
@@ -67,16 +67,6 @@ class UserProfileController extends Controller
         else{
             return redirect()->back();
         }
-        /*$this->validate(request(), [
-            'name' => 'required',
-            'email' => 'required|email|unique:users'
-        ]);
-
-        $user->name = request('name');
-        $user->email = request('email');
-
-        $user->save();
-        return back();*/
     }
 
     //public function edit($id)

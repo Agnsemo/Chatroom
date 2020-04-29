@@ -30,7 +30,7 @@
                         </h2>
                         <h5> Email : {{ Auth::user()-> email}}</h4>
                         <hr>
-                        <h6>Profile functions</h6>
+                        
                         </br>
                             <!-- Edit-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
@@ -39,12 +39,13 @@
 
                             <!--change password-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" href="">Change Password</a></button>
+                            <a style="color:white" href="{{ route('password.change') }}">Change Password</a></button>
                             
                             <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
+                            
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" href="">Remove Account</a></button>
+                            <a style="color:white" href="">Delete Account</a></button>
 
                              <!--to chat-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">

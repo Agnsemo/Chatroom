@@ -58,7 +58,6 @@
                         <button type = "submit"class="btn btn-primary" style="margin-left:500px;">
                                 <a style="color:white" href="{{ route('user.profile') }}">Back to profile</a></button>
                     </form>
-                    
                 </div>
             </div>
         </div>

@@ -28,5 +28,9 @@ Route::get('user/profile', 'UserProfileController@index')->name('user.profile');
 Route::get('user/edit', 'UserProfileController@edit')->name('user.edit');
 Route::post('user/edit', 'UserProfileController@update')->name('user.update');
 
+Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('password.change');
+
+Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
+
 
 

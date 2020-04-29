@@ -2,13 +2,22 @@
 
 @section('content')
 <div class="container">
+        @if( session('successMsg'))
+            <div class="alert alert-icon alert-success alert-dismissible" role="alert"> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <i class="mdi mdi-check-all"></i>
+                <strong>{{ session('successMsg') }}</strong>
+            </div> 
+        @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" style="padding:25px">
                         @csrf
 
                         <div class="form-group row">
