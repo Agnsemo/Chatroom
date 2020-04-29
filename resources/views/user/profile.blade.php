@@ -8,6 +8,28 @@
     </style>
 @endsection
 
+<script>
+function myFunction() {
+    var txt;
+    var r = confirm("Are you sure you want to delete your account? ");
+    if (r == true) {
+        alert("Your Account deleted!");
+        //UserController.destroy Auth::logout();
+        //atlogininti ji, 
+        //istrinti account ir 
+        //sugrizti to public +
+        //pridejau delete route
+
+        window.location = "{{ route('user.delete') }}";
+        //window.location = "{{ route('labas') }}";
+    } else {
+        alert("Your account is not deleted!");
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -45,7 +67,7 @@
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
                             
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" href="">Delete Account</a></button>
+                            <a style="color:white" onclick="myFunction()">Delete Account</a></button>
 
                              <!--to chat-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">

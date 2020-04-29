@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('/', function () {return view('welcome');})->name('labas');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -31,6 +32,8 @@ Route::post('user/edit', 'UserProfileController@update')->name('user.update');
 Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('password.change');
 
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
+
+Route::post('user/profile', 'UserProfileController@delete')->name('user.delete');
 
 
 
