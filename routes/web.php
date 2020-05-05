@@ -33,7 +33,8 @@ Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('pas
 
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
 
-Route::post('user/profile', 'UserProfileController@delete')->name('user.delete');
+Route::post('user/profile/delete', 'UserProfileController@destroy')->name('delete');
+
 
 
 

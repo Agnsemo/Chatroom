@@ -13,17 +13,23 @@ function myFunction() {
     var txt;
     var r = confirm("Are you sure you want to delete your account? ");
     if (r == true) {
-        alert("Your Account deleted!");
+        //alert("Your Account deleted!");
         //UserController.destroy Auth::logout();
-        //atlogininti ji, 
+        //atlogininti user 
         //istrinti account ir 
-        //sugrizti to public +
+        //sugrizti to public 
         //pridejau delete route
 
-        window.location = "{{ route('user.delete') }}";
+        //window.location.href = "{{ route('delete')}}";
         //window.location = "{{ route('labas') }}";
+        //window.location = "{{ route('labas') }}";
+        //href = "{{ route('delete') }}";
+        //window.location = "{{URL::route('delete')}}";
+        //redirect()->route('delete');
+        //var d = "{{ route('delete')}}";
     } else {
         alert("Your account is not deleted!");
+        window.location = "{{ route('user.profile') }}";
     }
     document.getElementById("demo").innerHTML = txt;
 }
@@ -65,16 +71,16 @@ function myFunction() {
                             
                             <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
-                            
-                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" onclick="myFunction()">Delete Account</a></button>
+                            <form action="{{route('delete')}}"  method = "post">
+                                @csrf
+                                <button type = "submit" class="btn btn-danger" style="align:right;padding:10px;margin:5px;margin-left : 80%;">
+                                <a style="color:white" onclick="return confirm('Are you sure you want to delete your account?');">Delete Account</a></button>
+                            </form>
 
                              <!--to chat-->
-                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <button type = "submit"class="btn btn-info" style="padding:10px 20px;margin:5px;margin-left : 80%;">
                             <a style="color:white" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
-                        
-                        
                     </div>
                 </div>
             </div>

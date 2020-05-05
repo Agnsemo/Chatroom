@@ -28,13 +28,14 @@ class UserProfileController extends Controller
         return view('user.profile');
     }
 
-    public function delete(Request $request)
+    public function destroy(Request $request)
     {
          $user = User::findOrFail(Auth::user()->id);
          Auth::logout();
          $user->delete();
          //return redirect()->route('labas');
-         return redirect()->route('welcome');
+         //return redirect()->route('labas');
+         return redirect('/');
     }
 
     public function update(Request $request)
