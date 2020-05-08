@@ -49,8 +49,9 @@ class ContactsController extends Controller
             $q->where('to', auth()->id());
         })
         ->get();
-
+		return Redirect::response()->json($messages);
         return response()->json($messages);
+		redirect(Request::url())
     }
 
     public function send(Request $request)
@@ -64,5 +65,6 @@ class ContactsController extends Controller
         broadcast(new NewMessage($message));
 
         return response()->json($message);
+		redirect(Request::url())
     }
 }

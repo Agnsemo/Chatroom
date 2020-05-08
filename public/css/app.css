@@ -3540,6 +3540,13 @@ fieldset:disabled a.btn {
   border-radius: 0.2rem;
 }
 
+.card-body {
+    display: inline-block;
+    background: lightblue;
+    padding: 3em;
+    border-radius: 4em; 
+}
+
 .btn-block {
   display: block;
   width: 100%;
