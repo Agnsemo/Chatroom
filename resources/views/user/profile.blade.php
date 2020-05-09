@@ -47,8 +47,11 @@ function myFunction() {
                         <img class="image" src="../images/user.png" alt="Your Profile Image" 
                         style="width:250px;height:250px;padding:10px;margin:20px;">
                         <!--button uplaod picture-->
-                        <button type = "submit"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
-                            <a style="color:blue" href="">Upload picture</a></button>
+                        <button type = "button"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:115px;margin-top:1px;">
+                            <a href="">Browse</Picture></a></button>
+
+                        <button type = "submit"class="btn btn-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
+                            <a style="color:white" href="">Upload picture</a></button>
                     </div>
                     <div class="col-sm-9">
                         {{-- Username--}}
