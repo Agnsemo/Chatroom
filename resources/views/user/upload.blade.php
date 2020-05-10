@@ -9,10 +9,10 @@
                 <div class="card-header">Upload your picture</div>
                 <div class="row">
                     <div class="col-sm-3">
-                    @if ($message = Session::get('success'))
-                        <img class = "image" src="../images/{{ Session::get('path') }}" 
+                    <!--@if ($message = Session::get('success'))
+                        <img class = "image" src="../images/{{ Auth::user()-> profile_image}}" 
                         style="width:250px;height:250px;padding:10px;margin:20px;border-radius: 50%" width="300" />
-                    @endif
+                    @endif-->
                     <!--sena pic is db-->
                         <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
                         style="width:250px;height:250px;padding:10px;margin:20px;border-radius: 50%">
