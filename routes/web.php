@@ -35,6 +35,9 @@ Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')-
 
 Route::post('user/profile/delete', 'UserProfileController@destroy')->name('delete');
 
+Route::get('user/upload','UplaodfileController@index')->name('user.upload');
+
+Route::post('user/upload', 'UplaodfileController@upload')->name('user.uplaod');
 
 
 

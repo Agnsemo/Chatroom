@@ -1,40 +1,5 @@
 @extends('layouts.app')
 
-@section('stylesheets')
-    <style type="text/css">
-        .image {
-            width: 100px;
-        }
-    </style>
-@endsection
-
-<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Are you sure you want to delete your account? ");
-    if (r == true) {
-        //alert("Your Account deleted!");
-        //UserController.destroy Auth::logout();
-        //atlogininti user 
-        //istrinti account ir 
-        //sugrizti to public 
-        //pridejau delete route
-
-        //window.location.href = "{{ route('delete')}}";
-        //window.location = "{{ route('labas') }}";
-        //window.location = "{{ route('labas') }}";
-        //href = "{{ route('delete') }}";
-        //window.location = "{{URL::route('delete')}}";
-        //redirect()->route('delete');
-        //var d = "{{ route('delete')}}";
-    } else {
-        alert("Your account is not deleted!");
-        window.location = "{{ route('user.profile') }}";
-    }
-    document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
 
 @section('content')
 <div class="container">
@@ -44,14 +9,14 @@ function myFunction() {
                 <div class="card-header">User profile</div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <img class="image" src="../images/user.png" alt="Your Profile Image" 
-                        style="width:250px;height:250px;padding:10px;margin:20px;">
-                        <!--button uplaod picture-->
-                        <button type = "button"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:115px;margin-top:1px;">
-                            <a href="">Browse</Picture></a></button>
+                        <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
+                        style="width:250px;height:250px;padding:10px;margin:20px;border-radius: 50%">
 
-                        <button type = "submit"class="btn btn-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
-                            <a style="color:white" href="">Upload picture</a></button>
+                        
+                        <!--button uplaod picture-->
+                            <button type = "submit"class="btn btn-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
+                            <a style="color:white" href="{{ route('user.upload') }}">Upload picture</a></button>
+                        
                     </div>
                     <div class="col-sm-9">
                         {{-- Username--}}
@@ -84,6 +49,9 @@ function myFunction() {
                             <button type = "submit"class="btn btn-info" style="padding:10px 20px;margin:5px;margin-left : 80%;">
                             <a style="color:white" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
+                            </br>
+
+                            
                     </div>
                 </div>
             </div>
