@@ -3542,9 +3542,9 @@ fieldset:disabled a.btn {
 
 .card-body {
     display: inline-block;
-    background: lightblue;
+    background: white;
     padding: 3em;
-    border-radius: 4em; 
+    border-radius: 0,50rem; 
 }
 
 .btn-block {
@@ -3635,7 +3635,7 @@ input[type="button"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #BC9E82;
+  background-color: #F4EA74;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -3761,10 +3761,10 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #000;
   text-align: inherit;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: #F4EA74;
   border: 0;
 }
 
@@ -5059,10 +5059,10 @@ input[type="button"].btn-block {
           flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #EFC088;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: $50
 }
 
 .card > hr {
@@ -6895,7 +6895,7 @@ a.bg-success:hover,
 a.bg-success:focus,
 button.bg-success:hover,
 button.bg-success:focus {
-  background-color: #1e7e34 !important;
+  background-color: #F4EA74 !important;
 }
 
 .bg-info {
@@ -6906,7 +6906,7 @@ a.bg-info:hover,
 a.bg-info:focus,
 button.bg-info:hover,
 button.bg-info:focus {
-  background-color: #117a8b !important;
+  background-color: #F4EA74 !important;
 }
 
 .bg-warning {
@@ -10419,12 +10419,14 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #BC9E82;
+  background-color: #EFC088;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .card-body {
   padding: 0 !important;
+  border - color: #1DDC51
+  border-radius: 0.50rem;
 }
 
