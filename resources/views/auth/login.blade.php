@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<body style="background-color:#F4EA74;">
 <div class="container">
         @if( session('successMsg'))
             <div class="alert alert-icon alert-success alert-dismissible" role="alert"> 
@@ -76,5 +75,4 @@
         </div>
     </div>
 </div>
-</body>
 @endsection

@@ -13,8 +13,8 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #F4EA74;
-                color: #DE9C4D;
+                background-color: #EBC8B2;
+                color: #BC9E82;
                 font-family: 'Lucida Handwriting';
                 font-weight: 100;
                 height: 100vh;
@@ -50,7 +50,7 @@
             }
 
             .links > a {
-                color: #DE9C4D;
+                color: #cc9999;
                 padding: 0 25px;
                 font-size: 17px;
                 font-weight: 600;
@@ -70,13 +70,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Trio chat 
+                    TRIO CHAT
                 </div>
 
                 <div class="links">
                     <a href="https://github.com/Agnsemo/Chatroom">GitHub</a>
 					@auth
-                        <a href="{{ url('/home') }}">Chatroom</a>
+                        <a href="{{ url('/home') }}">CHAT</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
