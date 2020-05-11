@@ -9,8 +9,10 @@ class SearchController extends Controller
 {
 	public function search(Request $request) 
 	{
-		$search = $request->get('search');
-		$users = DB::table('users')->where('name', 'like', '%'.$search.'%')->paginate(10);
-        return view('home', ['users' => $users]);
+		$q = $reguest->get( 'q' );
+		$user = User::where('name','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
+		if(count($user) > 0)
+			return view('home')->withDetails($user)->withQuery ( $q );
+		else return view ('home')->withMessage('No Details found. Try to search again !');
 	}
 }

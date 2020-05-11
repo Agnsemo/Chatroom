@@ -33,6 +33,12 @@ Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('pas
 
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
 
-Route::get('/search', 'SearchController@search');
+Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $user = User::where('name','LIKE','%'.$q.'%')->orWhere('email','LIKE','%'.$q.'%')->get();
+    if(count($user) > 0)
+        return view('home')->withDetails($user)->withQuery ( $q );
+    else return view ('home')->withMessage('No Details found. Try to search again !');
+});
 
 
