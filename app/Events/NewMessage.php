@@ -42,5 +42,6 @@ class NewMessage implements ShouldBroadcast
         $this->message->load('fromContact');
 
         return ["message" => $this->message];
+		//return view('home');
     }
 }

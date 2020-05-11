@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 Route::get('/contacts', 'ContactsController@get');
 Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
 Route::post('/conversation/send', 'ContactsController@send');
@@ -38,6 +39,5 @@ Route::post('user/profile/delete', 'UserProfileController@destroy')->name('delet
 Route::get('user/upload','UplaodfileController@index')->name('user.upload');
 
 Route::post('user/upload', 'UplaodfileController@upload')->name('user.uplaod');
-
 
 
