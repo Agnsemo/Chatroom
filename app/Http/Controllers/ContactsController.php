@@ -49,7 +49,7 @@ class ContactsController extends Controller
             $q->where('to', auth()->id());
         })
         ->get();
-
+		
         return response()->json($messages);
     }
 

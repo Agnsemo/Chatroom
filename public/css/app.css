@@ -3547,11 +3547,13 @@ fieldset:disabled a.btn {
 
 .btn-block + .btn-block {
   margin-top: 0.5rem;
+  background-color: #F4EA74;
 }
 
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
+  color: #000;
   width: 100%;
 }
 
@@ -3628,7 +3630,7 @@ input[type="button"].btn-block {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #BC9E82;
+  background-color: #F4EA74;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -3754,10 +3756,10 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #000;
   text-align: inherit;
   white-space: nowrap;
-  background-color: transparent;
+  background-color: F4EA74;
   border: 0;
 }
 
@@ -6892,7 +6894,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-  background-color: #17a2b8 !important;
+  background-color: #F4EA74   !important;
 }
 
 a.bg-info:hover,
@@ -6903,7 +6905,7 @@ button.bg-info:focus {
 }
 
 .bg-warning {
-  background-color: #ffc107 !important;
+  background-color: #F4EA74  !important;
 }
 
 a.bg-warning:hover,
@@ -10412,7 +10414,7 @@ a.text-dark:focus {
 }
 
 .navbar-laravel {
-  background-color: #BC9E82;
+  background-color: #EFC088;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
