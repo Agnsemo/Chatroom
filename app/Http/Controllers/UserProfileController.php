@@ -28,11 +28,15 @@ class UserProfileController extends Controller
         return view('user.profile');
     }
 
-    /*public function edit(User $user)
-    {   
-        $user = Auth::user();
-        return view('users.edit', compact('user'));
-    }*/
+    public function destroy(Request $request)
+    {
+         $user = User::findOrFail(Auth::user()->id);
+         Auth::logout();
+         $user->delete();
+         //return redirect()->route('labas');
+         //return redirect()->route('labas');
+         return redirect('/');
+    }
 
     public function update(Request $request)
     { 
