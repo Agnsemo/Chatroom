@@ -78,7 +78,7 @@
 					@auth
                         <a href="{{ url('/home') }}">Chatroom</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Log in</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
