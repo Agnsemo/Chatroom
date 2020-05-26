@@ -9,12 +9,8 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ChatPageTest extends DuskTestCase
 {
-    /**
-     * Checks if a logged out user who tries to access the Chat page gets
-     * redirected to the Login page
-     *
-     * @return void
-     */
+    // Checks if a logged out user who tries to access the Chat page gets
+    // redirected to the Login page
     public function test_redirecting_to_login_page()
     {
         $this->browse(function (Browser $browser) {

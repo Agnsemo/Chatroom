@@ -9,11 +9,7 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class MainPageTest extends DuskTestCase
 {
-    /**
-     * Checks if the Main page has 'Trio chat' text
-     *
-     * @return
-     */
+    // Checks if the Main page has 'Trio chat' text
     public function test_main_page_text()
     {
         $this->browse(function (Browser $browser) {
@@ -22,11 +18,7 @@ class MainPageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the links 'Login' and 'Register' work
-     *
-     * @return
-     */
+    // Checks if the links 'Login' and 'Register' work
     public function test_main_page_links_while_logged_out()
     {
         $this->browse(function (Browser $browser) {
@@ -42,11 +34,7 @@ class MainPageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the link 'Chatroom' works
-     *
-     * @return
-     */
+    // Checks if the link 'Chatroom' works
     public function test_main_page_link_while_logged_in()
     {
         $this->browse(function (Browser $browser) {

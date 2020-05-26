@@ -9,12 +9,8 @@ use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ProfilePageTest extends DuskTestCase
 {
-    /**
-     * Checks if a logged out user who tries to access the Profile page gets
-     * redirected to the Login page
-     *
-     * @return void
-     */
+    // Checks if a logged out user who tries to access the Profile page gets
+    // redirected to the Login page
     public function test_redirecting_to_login_page()
     {
         $this->browse(function (Browser $browser) {
@@ -22,12 +18,8 @@ class ProfilePageTest extends DuskTestCase
                     ->assertPathIs('/laravel/Chatroom/public/login');
         });
     }
-    
-    /**
-     * Checks if a logged in user can see the Profile page
-     *
-     * @return void
-     */
+
+    // Checks if a logged in user can see the Profile page
     public function test_seeing_the_profile_page()
     {        
         $this->browse(function (Browser $browser) {
@@ -37,11 +29,7 @@ class ProfilePageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the Profile page links work
-     *
-     * @return
-     */
+    // Checks if the Profile page links work
     public function test_profile_page_links()
     {
         $this->browse(function (Browser $browser) {
@@ -69,11 +57,7 @@ class ProfilePageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the Upload Picture page links works
-     *
-     * @return void
-     */
+    // Checks if the Upload Picture page links works
     public function test_upload_picture_page_link()
     {
         $this->browse(function (Browser $browser) {
@@ -83,11 +67,7 @@ class ProfilePageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the Upload Picture page links works
-     *
-     * @return void
-     */
+    // Checks if the Upload Picture page links works
     public function test_edit_profile_page_link()
     {
         $this->browse(function (Browser $browser) {
@@ -97,11 +77,7 @@ class ProfilePageTest extends DuskTestCase
         });
     }
     
-    /**
-     * Checks if the Upload Picture page links works
-     *
-     * @return void
-     */
+    // Checks if the Upload Picture page links works
     public function test_change_password_page_link()
     {
         $this->browse(function (Browser $browser) {
