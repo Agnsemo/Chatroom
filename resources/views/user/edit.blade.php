@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Update your profile') }}</div>
+                <div class="card-header">{{ __('UPDATE PROFILE') }}</div>
 
                 <div class="card-body">
                 <!--action="{{route('user.update', $user)}}"-->
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail address') }}</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ $user->email }}" required>
@@ -51,13 +51,13 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4" style="padding-bottom:20px">
                                 <button type="submit" class="btn btn-info" >
-                                    {{ __('Update profile') }}
+                                    {{ __('Update') }}
                                 </button>
                                 
                             </div>
                         </div>
                         <button type = "submit"class="btn btn-primary" style="margin-left:500px;">
-                                <a style="color:white" href="{{ route('user.profile') }}">Back to profile</a></button>
+                                <a style="color:black" href="{{ route('user.profile') }}">Back to profile</a></button>
                     </form>
                 </div>
             </div>

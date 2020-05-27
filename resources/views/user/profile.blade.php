@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">User profile</div>
+                <div class="card-header">USER PROFILE</div>
                 <div class="row">
                     <div class="col-sm-3">
                         <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
@@ -15,9 +15,8 @@
 
                         
                         <!--button uplaod picture-->
-                            <button type = "submit"class="btn btn-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
-                            <a style="color:white" href="{{ route('user.upload') }}">Upload picture</a></button>
-                        
+                        <button type = "submit"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
+                            <a style="color:black" href="">Upload picture</a></button>
                     </div>
                     <div class="col-sm-9">
                         {{-- Username--}}
@@ -31,24 +30,23 @@
                         </br>
                             <!-- Edit-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" href="{{ route('user.edit') }}">Edit profile</a></button>
+                            <a style="color:black" href="{{ route('user.edit') }}">Edit profile</a></button>
                             
 
                             <!--change password-->
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:white" href="{{ route('password.change') }}">Change Password</a></button>
+                            <a style="color:black" href="{{ route('password.change') }}">Change password</a></button>
                             
                             <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
-                            <form action="{{route('delete')}}"  method = "post">
-                                @csrf
-                                <button type = "submit" class="btn btn-danger" style="align:right;padding:10px;margin:5px;margin-left : 80%;">
-                                <a style="color:white" onclick="return confirm('Are you sure you want to delete your account?');">Delete Account</a></button>
-                            </form>
+
+                            
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:black" href="">Delete account</a></button>
 
                              <!--to chat-->
-                            <button type = "submit"class="btn btn-info" style="padding:10px 20px;margin:5px;margin-left : 80%;">
-                            <a style="color:white" href="{{ route('home') }}">Back to chat</a></button>
+                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <a style="color:black" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
                             </br>
 

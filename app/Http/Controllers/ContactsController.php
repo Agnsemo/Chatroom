@@ -49,9 +49,8 @@ class ContactsController extends Controller
             $q->where('to', auth()->id());
         })
         ->get();
-		return Redirect::response()->json($messages);
-       // return response()->json($messages);
-		//redirect(Request::url())
+		
+        return response()->json($messages);
     }
 
     public function send(Request $request)

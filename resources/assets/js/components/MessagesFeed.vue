@@ -41,7 +41,7 @@
 
 <style lang="scss" scoped>
 .feed {
-    background: #f0f0f0;
+    background: #F1B487;
     height: 100%;
     max-height: 470px;
     overflow: scroll;
@@ -66,7 +66,7 @@
                     text-align: right;
 
                     .text {
-                        background: #b2b2b2;
+                        background: #F1B487;
                     }
                 }
 
@@ -74,7 +74,7 @@
                     text-align: left;
 
                     .text {
-                        background: #81c4f9;
+                        background: #F1B487;
                     }
                 }
             }

@@ -15,7 +15,7 @@
             html, body {
                 background-color: #F4EA74;
                 color: #DE9C4D;
-                font-family: 'Lucida Handwriting';
+                font-family: Tahoma, Geneva, sans-serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -70,7 +70,8 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Trio chat 
+                    Trio chat
+
                 </div>
 
                 <div class="links">
