@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<body style="background-color:#F4EA74;">
 <div class="container">
         @if( session('errorMsg'))
             <div class="alert alert-icon alert-danger alert-dismissible" role="alert"> 
@@ -17,14 +18,14 @@
         
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Update Password') }}</div>
+                <div class="card-header">{{ __('CHANGE PASSWORD') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('password.update') }}" style="padding:25px">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="oldpassword" class="col-md-4 col-form-label text-md-right" style="padding-top:25px">{{ __('Current Password') }}</label>
+                            <label for="oldpassword" class="col-md-4 col-form-label text-md-right" style="padding-top:25px">{{ __('Current password') }}</label>
 
                             <div class="col-md-6" style="padding-top:20px">
                                 <input id="oldpassword" type="password" class="form-control{{ $errors->has('oldpassword') ? ' is-invalid' : '' }}" name="oldpassword" required autofocus>
@@ -40,7 +41,7 @@
 
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('New Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('New password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -54,7 +55,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Repeat new Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Repeat new password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -69,11 +70,12 @@
                             </div>
                         </div>
                         <button type = "submit"class="btn btn-primary" style="margin-left:500px;">
-                                <a style="color:white" href="{{ route('user.profile') }}">Back to profile</a></button>
+                                <a style="color:black" href="{{ route('user.profile') }}">Back to profile</a></button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</body>
 @endsection
