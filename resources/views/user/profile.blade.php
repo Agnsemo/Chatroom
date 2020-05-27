@@ -10,7 +10,7 @@
                 <div class="card-header">USER PROFILE</div>
                 
                 <div class="card-body">
-                <div class="row">
+                 <div class="row">
                     <div class="col-sm-3">
                         <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
                         style="width:250px;height:250px;padding:10px;margin:20px;border-radius: 50%">
@@ -54,7 +54,7 @@
 
                             
                     </div>
-                </div>
+                 </div>
                 </div>
             </div>
         </div>
