@@ -8,6 +8,8 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">USER PROFILE</div>
+                
+                <div class="card-body">
                 <div class="row">
                     <div class="col-sm-3">
                         <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
@@ -52,6 +54,7 @@
 
                             
                     </div>
+                </div>
                 </div>
             </div>
         </div>

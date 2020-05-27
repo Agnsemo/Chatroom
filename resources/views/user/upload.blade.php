@@ -7,6 +7,7 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header">Upload your picture</div>
+                <div class="card-body">
                 <div class="row">
                     <div class="col-sm-3">
                     <!--@if ($message = Session::get('success'))
@@ -71,6 +72,7 @@
                             </br> </br>
                             </br>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
