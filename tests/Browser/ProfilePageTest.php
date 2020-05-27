@@ -35,7 +35,7 @@ class ProfilePageTest extends DuskTestCase
         $this->browse(function (Browser $browser) use ($user) {
             $browser->loginAs($user->email)
                     ->visit('/user/profile')
-                    ->assertSee('User profile');
+                    ->assertSee('USER PROFILE');
         });
     }
     
@@ -56,7 +56,7 @@ class ProfilePageTest extends DuskTestCase
         
         $this->browse(function (Browser $browser) {
             $browser->visit('/user/profile')
-                    ->clickLink('Change Password')
+                    ->clickLink('Change password')
                     ->assertPathIs('/laravel/Chatroom/public/change-password');
         });
         

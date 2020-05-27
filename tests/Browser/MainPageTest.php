@@ -23,7 +23,7 @@ class MainPageTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->clickLink('Login')
+                    ->clickLink('Log in')
                     ->assertPathIs('/laravel/Chatroom/public/login');
         });
         

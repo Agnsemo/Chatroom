@@ -18,7 +18,7 @@ class AccountLogInTest extends DuskTestCase
             $browser->visit('/login')
                 ->keys('#email', $user->email)
                 ->keys('#password', 'secret')
-                ->press('Login')
+                ->press('Log in')
                 ->assertPathIs('/laravel/Chatroom/public/home');
             
             $user->delete();
