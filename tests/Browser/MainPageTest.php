@@ -36,13 +36,17 @@ class MainPageTest extends DuskTestCase
     
     // Checks if the link 'Chatroom' works
     public function test_main_page_link_while_logged_in()
-    {
-        $this->browse(function (Browser $browser) {
-            $browser->loginAs(User::find(1))
+    {                
+        $user = factory(User::class)->create();
+
+        $this->browse(function ($browser) use ($user) {
+            $browser->loginAs($user->email)
                     ->visit('/')
                     ->assertSee('Trio chat')
                     ->clickLink('Chatroom')
                     ->assertPathIs('/laravel/Chatroom/public/home');
+            
+            $user->delete();
         });
     }
 }

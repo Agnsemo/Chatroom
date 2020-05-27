@@ -8,7 +8,15 @@ use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ProfilePageTest extends DuskTestCase
-{
+{ 
+    protected $user;
+
+    public function setUp(){
+        parent::setUp();
+        $this->user = factory(User::class)->create();
+
+    }
+    
     // Checks if a logged out user who tries to access the Profile page gets
     // redirected to the Login page
     public function test_redirecting_to_login_page()
@@ -22,8 +30,10 @@ class ProfilePageTest extends DuskTestCase
     // Checks if a logged in user can see the Profile page
     public function test_seeing_the_profile_page()
     {        
-        $this->browse(function (Browser $browser) {
-            $browser->loginAs(User::find(1))
+        $user = $this->user;
+        
+        $this->browse(function (Browser $browser) use ($user) {
+            $browser->loginAs($user->email)
                     ->visit('/user/profile')
                     ->assertSee('User profile');
         });
@@ -80,10 +90,14 @@ class ProfilePageTest extends DuskTestCase
     // Checks if the Upload Picture page links works
     public function test_change_password_page_link()
     {
-        $this->browse(function (Browser $browser) {
+        $user = $this->user;
+        
+        $this->browse(function (Browser $browser){
             $browser->visit('/change-password')
                     ->clickLink('Back to profile')
                     ->assertPathIs('/laravel/Chatroom/public/user/profile');
         });
+        
+        $user->delete();
     }
 }

@@ -12,17 +12,16 @@ class AccountLogInTest extends DuskTestCase
     // Checks if a user can log into an existing account
     public function test_logging_in()
     {
-        $this->user = $user = factory(User::class)->create();
+        $user = factory(User::class)->create();
 
-        $this->browse(function ($browser) use ($user) {
-
+        $this->browse(function (Browser $browser) use ($user) {
             $browser->visit('/login')
                 ->keys('#email', $user->email)
                 ->keys('#password', 'secret')
                 ->press('Login')
                 ->assertPathIs('/laravel/Chatroom/public/home');
             
-            $this->user->delete();
+            $user->delete();
         });
     }
 }

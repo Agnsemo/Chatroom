@@ -2,33 +2,39 @@
 
 namespace Tests\Browser;
 
+use Illuminate\Foundation\Testing\WithFaker;
 use App\User;
 use Tests\DuskTestCase;
 use Laravel\Dusk\Browser;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Support\Facades\DB;
 
 class AccountCreateTest extends DuskTestCase
 {
+    use withFaker;
+    
     // Checks if a user can create an account
     public function test_creating_account()
-    {        
-        $this->browse(function (Browser $browser) {
+    {    
+        $name=$this->faker->firstName;
+        $email=$this->faker->email;
+        $passw=$this->faker->password;
+        
+        $this->browse(function (Browser $browser) use ($name, $email, $passw) {
             $browser->visit('/register')
-                    ->keys('#name', 'test')
-                    ->keys('#email', 'demo@example.com')
-                    ->keys('#password', '123456')
-                    ->keys('#password-confirm', '123456')
+                    ->keys('#name', $name)
+                    ->keys('#email', $email)
+                    ->keys('#password', $passw)
+                    ->keys('#password-confirm', $passw)
                     ->press('Register')
                     ->assertPathIs('/laravel/Chatroom/public/home');
         });
         
         $this->assertDatabaseHas('users', [
-            'name' => 'test',
-            'email' => 'demo@example.com',
+            'name' => $name,
+            'email' => $email,
         ]);
         
-        $user = User::where('email','demo@example.com');
+        $user = User::where('email', $email);
         $user->delete();
     }
 }
