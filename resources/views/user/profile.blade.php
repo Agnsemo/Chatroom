@@ -18,7 +18,7 @@
                         
                         <!--button uplaod picture-->
                         <button type = "submit"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
-                            <a style="color:black" href="">Upload picture</a></button>
+                            <a style="color:black" href="{{ route('user.upload') }}">Upload picture</a></button>
                     </div>
                     <div class="col-sm-9">
                         {{-- Username--}}
@@ -42,12 +42,13 @@
                             <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
 
-                            
-                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
-                            <a style="color:black" href="">Delete account</a></button>
-
+                            <form action = "{{route('delete')}}" method = "post">
+                                @csrf
+                                <button type = "submit"class="btn btn-info" style="align:right;padding:10px;margin:5px;margin-left : 80%;">
+                                <a style="color:black" onclick="return confirm('Are you sure you want to delete your account?');">Delete account</a></button>
+                            </form>
                              <!--to chat-->
-                            <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
+                            <button type = "submit"class="btn btn-info" style="padding:10px 20px;margin:5px;margin-left : 80%;">
                             <a style="color:black" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
                             </br>
