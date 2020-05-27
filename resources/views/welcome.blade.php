@@ -71,6 +71,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Trio chat
+
                 </div>
 
                 <div class="links">

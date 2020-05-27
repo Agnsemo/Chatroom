@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+Route::get('/', function () {return view('welcome');})->name('labas');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -33,6 +34,10 @@ Route::get('/change-password', 'Auth\ChangePasswordController@index')->name('pas
 
 Route::post('/change-password', 'Auth\ChangePasswordController@changePassword')->name('password.update');
 
-Route::get('/search', 'SearchController@search');
+Route::post('user/profile/delete', 'UserProfileController@destroy')->name('delete');
+
+Route::get('user/upload','UplaodfileController@index')->name('user.upload');
+
+Route::post('user/upload', 'UplaodfileController@upload')->name('user.uplaod');
 
 

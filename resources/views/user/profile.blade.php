@@ -1,12 +1,5 @@
 @extends('layouts.app')
 
-@section('stylesheets')
-    <style type="text/css">
-        .image {
-            width: 100px;
-        }
-    </style>
-@endsection
 
 @section('content')
 <body style="background-color:#F4EA74;">
@@ -17,8 +10,10 @@
                 <div class="card-header">USER PROFILE</div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <img class="image" src="../images/user.png" alt="Your Profile Image" 
-                        style="width:250px;height:250px;padding:10px;margin:20px;">
+                        <img class="image" src="../images/{{ Auth::user()-> profile_image}}" alt="Your Profile Image" 
+                        style="width:250px;height:250px;padding:10px;margin:20px;border-radius: 50%">
+
+                        
                         <!--button uplaod picture-->
                         <button type = "submit"class="btn btn-outline-info" style="padding:3px;margin:20px;margin-left:90px;margin-bottom:50px;margin-top:1px;">
                             <a style="color:black" href="">Upload picture</a></button>
@@ -44,6 +39,7 @@
                             
                             <!--remove account-->
                             <!--paklausia ar tikrai norite istrinti ir paspaudus mygtuka grizta i home langa -->
+
                             
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
                             <a style="color:black" href="">Delete account</a></button>
@@ -52,8 +48,9 @@
                             <button type = "submit"class="btn btn-info" style="padding:10px;margin:10px;">
                             <a style="color:black" href="{{ route('home') }}">Back to chat</a></button>
                             </br> </br>
-                        
-                        
+                            </br>
+
+                            
                     </div>
                 </div>
             </div>

@@ -63,6 +63,7 @@ class ContactsController extends Controller
 
         broadcast(new NewMessage($message));
 
-        return response()->json($message);
+        return Redirect::response()->json($message);
+		//redirect(Request::url())
     }
 }
