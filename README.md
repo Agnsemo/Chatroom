@@ -1,70 +1,23 @@
-## Messenger App using Laravel and Vue.JS
+Apsilankyti pokalbių svetainėje TRIO chat galima adresu http://triochat.000webhostapp.com/. Pradiniame puslapyje paspaudus GITHUB mygtuką, būsite nukelti į svetainės kodo saugyklos puslapį; paspaudus LOG IN – į prisijungimo prie egzistuojančios paskyros puslapį; paspaudus REGISTER – į registracijos puslapį. 
 
-[Youtube Tutorial link](https://www.youtube.com/watch?v=5sXmfwnxfjA&list=PLJpBh2VJhy5x2GKfkfIcn0r6P6uLat7xR)
+Norint susikurti naują pokalbių svetainės paskyrą, registracijos puslapyje reikia suvesti savo pageidaujamą prisijungimo vardą, el. pašto adresą, slaptažodį ir jo pakartojimą. Paspaudus Register mygtuką ir sėkmingai sukūrus paskyrą, būsite nukelti į susirašinėjimo puslapį. 
 
-#### [@WeCodeTutorials](https://twitter.com/WeCodeTutorials)
-[![Logo](https://cdn.pbrd.co/images/HdwCut8.png)](https://www.youtube.com/channel/UCj9VatwdukZjNOnIKcpWcsA)
+Norint prisijungti prie egzistuojančios pokalbių svetainės paskyros, prisijungimo puslapyje reikia suvesti paskyros el. pašto adresą ir slaptažodį. Paspaudus Log in mygtuką ir sėkmingai prisijungus, būsite nukelti į susirašinėjimo puslapį.
 
-This project is made for my youtube tutorial on "Messenger App with Laravel, Vue.JS & Laravel Echo".
+Esant prisijungimo ar registracijos puslapyje ir norint apsilankyti kitame, galite atitinkamai paspausti antraštėje esančius Log in ir Register mygtukus. 
 
-![App Example](https://media.giphy.com/media/8cARsYOk9DmCLZTZOb/giphy.gif)
+Prisijungus prie paskyros ir esant susirašinėjimo puslapyje, matysite pokalbių langą, kurio dešinėje – kontaktų sąrašas. Norint pradėti bendrauti, reikia spustelti ant bet kurio kontakto lauko. Tai padarius, pokalbių lange pasirodys pasirinkto kontakto prisijungimo vardas ir jau esantys jūsų pokalbio pranešimai (jei jų yra). Taip pat atsiras galimybė rašyti naują pranešimą Message... lauke ir jį išsiųsti paspaudus klaviatūros Enter klavišą. Sėkmingai išsiuntus pranešimą, jis pasirodys pokalbių lange. Kad pamatytumėte iš kontakto gautus pranešimus, reikia vėl paspausti ant kontakto laukelio kontaktų sąraše.
 
-## get it up and running.
+Prisijungus prie paskyros ir esant susirašinėjimo puslapyje, antraštėje matysite jūsų prisijungimo vardo mygtuką. Jį paspaudus atsidarys dvi parinktys: Profile ir Log out. Paspaudus Log out mygtuką būsite atjungti nuo dabartinės paskyros ir nukelti į pradinį puslapį, o paspaudus Profile būsite nukelti į savo profilio puslapį.
 
-After you clone this project, do the following:
+Esant profilio puslapyje matysite savo profilio nuotrauką, prisijungimo vardą, el. pašto adresą bei penkias parinktis: Upload picture, Edit profile, Change password, Delete account ir Back to chat. 
 
-```bash
-# go into the project
-cd Messenger-App-VueJS-and-Laravel
+Profilyje paspaudus Upload picture mygtuką būsite nukelti į profilio nuotraukos keitimo puslapį. Jame atsiras papildomos Browse..., Upload bei Back to profile parinktys. Paspaudus Browse... mygtuką, pasirodys failų pasirinkimo langas. Jame pažymėjus tinkamo formato (.jpg, .png, .gif) bei tinkamo dydžio nuotrauką, spustelėjus Open, o tada Upload parinktis, svetainė bandys pakeisti jūsų profilio nuotrauką į pasirinktą paveikslėlį. Tai padarius sėkmingai, atvaizdą matysite dabartiniame bei profilio puslapiuose. Paspaudus Back to profile mygtuką, būsite nukelti atgal į profilio puslapį.
 
-# create a .env file
-cp .env.example .env
+Profilyje paspaudus Edit profile mygtuką, būsite nukelti į paskyros duomenų keitimo puslapį. Jame matysite savo dabartinį prisijungimo vardą bei el. pašto adresą. Juos galite keisti. Norint išsaugoti pakeitimus, reikia spausti Update mygtuką. Sėkmingai atnaujinus duomenis, pasirodys tai patvirtinantis pranešimas.
 
-# install composer dependencies
-composer update
+Profilyje paspaudus Change password mygtuką, būsite nukelti į slaptažodžio keitimo puslapį. Norint pakeisti slaptažodį, reikia įvesti dabartinį, o naują pakartoti du kartus. Norint išsaugoti naują slaptažodį, reikia spausti Update mygtuką. Sėkmingai atnaujinus slaptažodį, pasirodys tai patvirtinantis pranešimas bei būsite nukelti į prisijungimo puslapį.
 
-# install npm dependencies
-npm install
+Profilyje paspaudus Delete account mygtuką, pasirodys patvirtinimo pranešimas. Jei norite ištrinti paskyrą, spauskite OK – jūsų paskyra bus ištrinta ir būsite nukelti į pradinį puslapį. Jei nenorite ištrinti paskyros, spauskite Cancel.
 
-# generate a key for your application
-php artisan key:generate
-
-# create a local MySQL database (make sure you have MySQL up and running)
-mysql -u root
-
-> create database chat_db;
-> exit;
-
-# add the database connection config to your .env file
-DB_CONNECTION=mysql
-DB_DATABASE=chat_db
-DB_USERNAME=root
-DB_PASSWORD=
-
-# run the migration files to generate the schema
-php artisan migrate
-
-# visit https://pusher.com and create a free app. then copy the keys into your .env file
-PUSHER_APP_ID=your_pusher_app_id
-PUSHER_APP_KEY=your_pusher_app_key
-PUSHER_APP_SECRET=your_pusher_app_secret
-PUSHER_APP_CLUSTER=your_pusher_cluster
-
-# change the BROADCAST_DRIVER in your .env to pusher
-BROADCAST_DRIVER=pusher
-
-# seed your databse with some users and messages
-php artisan db:seed
-
-# run webpack and watch for changes
-npm run watch
-```
-
-## Setup pusher
-
-- Visit [Pusher website](https://pusher.com), sign up and create your first app (it's free).
-- Next. copy the new keys to your `.env` file.
-- Make sure the necessary settings are enabled
-![Pusher app settings](https://user-images.githubusercontent.com/17595033/64108972-fb7b8a00-cd86-11e9-97ab-d2a3f7699b71.png)
-
-Good Luck :)
+Profilyje paspaudus Back to chat mygtuką, būsite nukelti į pokalbių puslapį.
