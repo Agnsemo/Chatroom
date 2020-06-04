@@ -1,0 +1,4 @@
+phpmyadmin:
+    external_links:
+        - db_server:db
+
