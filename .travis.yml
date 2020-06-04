@@ -8,8 +8,8 @@ branches:
         - tests
 
 before_script:
-    - composer install
-    - composer require --dev laravel/dusk:"^4.0"
+    - composer require laravel/dusk:"^4.0"
+    - composer update
     - php artisan dusk:install
     
 script:
