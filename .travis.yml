@@ -8,6 +8,7 @@ branches:
         - tests
 
 before_script:
+    - cp .env.dusk.local .env
     - composer require laravel/dusk:"^4.0"
     - composer update
     - php artisan dusk:install
