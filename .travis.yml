@@ -1,0 +1,29 @@
+language: php
+
+php: 
+    - 7.4.3
+    
+branches:
+    only:
+        - newTests
+
+services:
+    - mysql
+
+before_install:
+    - composer require laravel/dusk:"^4.0"
+    - composer update
+
+install:
+    - composer install
+    - php artisan dusk:install
+
+before_script:
+    - mysql -u root -e 'CREATE DATABASE chat_db;'
+    - mysql -u root -h 127.0.0.1 chat_db < chat_db.sql
+    - cp .env.dusk.local .env
+    
+script:
+    - php artisan dusk
+    
+
