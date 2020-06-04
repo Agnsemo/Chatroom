@@ -25,7 +25,7 @@ before_script:
     - composer update
     - php artisan dusk:install
     - mysql -e 'create database chat_db;'
-    - mysql -u root -h localhost chat_db < chat_db.sql
+    - mysql chat_db < chat_db.sql
     
 script:
     - php artisan dusk
