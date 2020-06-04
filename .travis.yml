@@ -10,6 +10,8 @@ branches:
 before_script:
     - rm -Rf vendor
     - composer install --no-dev
+    - composer require laravel/dusk
+    - composer update
     
 script:
     - php artisan dusk
