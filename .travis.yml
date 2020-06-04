@@ -8,7 +8,8 @@ branches:
         - tests
 
 before_script:
-    - composer install
+    - rm -Rf vendor
+    - composer install --no-dev
     
 script:
     - php artisan dusk
